@@ -1,0 +1,11 @@
+1.nand.c
+包括三个头文件def.h 2440addr.h nand.h,主要用于从nand flash拷贝数据到SDRAM区，以便能使程序从nand flash启动，即主要用于2440init.s中的IMPORT  CopyProgramFromNand
+
+
+2.mmu.c
+包括三个头文件def.h 2440addr.h nand.h,主要用于初始化内存，实现内存映射，解决内存对齐的问题，具体有2440slib.s来实现
+
+3.下载方式
+d:下载到nor flash运行，掉电易失
+a:下载到nand flash运行，掉电易失
+v/n:下载到nand flash运行，掉电不易失
